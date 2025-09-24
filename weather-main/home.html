@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="png" href="img/icon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <title>Weather App • Home</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <div class="brand">
+          <img src="img/icon.png" alt="Weather icon" />
+          <span>Weather App</span>
+        </div>
+        <nav>
+          <a href="home.html" class="active">Home</a>
+          <a href="index.html">Today</a>
+          <a href="search.html">Search</a>
+          <a href="world.html">World</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <div class="hero-text">
+          <h1 class="gradient-text">Plan smarter with precise, real‑time weather</h1>
+          <p>Get current conditions, forecasts, and trends for your location. Compare today with recent days and see where the weather is headed next.</p>
+          <div class="cta-group">
+            <a class="btn btn-primary" href="index.html">Tap to know weather</a>
+            <a class="btn btn-secondary" href="search.html">Search a city</a>
+          </div>
+          <p class="small muted">We use your location (with permission) for local insights. Works best on localhost or HTTPS.</p>
+        </div>
+        <div class="hero-card" aria-live="polite">
+          <div class="hero-loading" id="hero-loading">
+            <div class="spinner"></div>
+          </div>
+          <div class="hero-current" id="hero-current" hidden>
+            <div class="row">
+              <div class="current-city" id="current-city">—</div>
+              <div class="current-temp"><span id="current-temp">—</span></div>
+            </div>
+            <div class="row muted">
+              <span id="current-main">—</span>
+              <span>•</span>
+              <span>H: <span id="current-h">—</span>%</span>
+              <span>F: <span id="current-f">—</span>°</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container cards">
+        <article class="card" tabindex="0">
+          <h3>Historical snapshot</h3>
+          <p class="muted">Recent temperatures vs today for your location.</p>
+          <div id="history-list" class="list"></div>
+        </article>
+        <article class="card" tabindex="0">
+          <h3>On this day • Weather & environment</h3>
+          <p class="muted">Notable events from history around this date. Sourced from Wikipedia.</p>
+          <div id="otd-list" class="otd-list" aria-live="polite">
+            <div class="otd-loading"><div class="spinner"></div></div>
+          </div>
+        </article>
+        <article class="card" tabindex="0">
+          <h3>Trend & next move</h3>
+          <p class="muted">A simple comparison to suggest likely short‑term trend.</p>
+          <div id="trend-box" class="trend-box">—</div>
+        </article>
+        <article class="card" tabindex="0">
+          <h3>Quick links</h3>
+          <ul class="links">
+            <li><a href="index.html">Today at a glance</a></li>
+            <li><a href="search.html">Find another city</a></li>
+            <li><a href="world.html">Worldwide overview</a></li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span>© <span id="year"></span> Weather App</span>
+      </div>
+    </footer>
+
+    <script src="js/home.js"></script>
+  </body>
+</html>
+
+

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- links -->
+    <link rel="icon" type="png" href="img/icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Title -->
+    <title>Weather App</title>
+  </head>
+
+  <body>
+    <!-- main section -->
+    <div id="screen">
+      <nav>
+        <ul>
+          <li>
+            <a class="active" href="index.html"><i class="fa-solid fa-location-arrow"></i><span class="nav-label">Today</span></a>
+          </li>
+          <li>
+            <a href="search.html"><i class="fa-solid fa-magnifying-glass"></i><span class="nav-label">Search</span></a>
+          </li>
+          <li>
+            <a href="world.html"><i class="fa-solid fa-earth-americas"></i><span class="nav-label">World</span></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="content-grid">
+        <div class="main-column">
+      <!-- city name -->
+      <div class="city-name">
+          <i class="fa-solid fa-map-pin"></i>
+          <h1 id="city-name">Mumbai</h1>
+        </div>
+        <!-- weather icon -->
+        <div class="weather-icon-css">
+          <img class="weather-icon" src="img/sun.png" />
+        </div>
+        <!-- weather details -->
+        <div class="weather-description">
+          <div class="show-metric" id="metric">0°</div>
+          <div class="weather-details">
+            <div class="weather-main" id="weather-main">Sunnen</div>
+            <div class="h-f">
+              <div class="show-humidity">H: <span id="humidity">60</span></div>
+              ||
+              <div class="show-humidity">
+                F: <span id="feels-like">60</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Today-forecast -->
+        <div class="forcasts-box">
+          <div class="today-forecast">
+            <h4>TODAY</h4>
+            <div class="weather-icon-today">
+              <img class="weather-icons" src="img/sun.png" />
+            </div>
+            <div class="temp-today">
+              <span id="temp-min-today">50°</span><span>/ </span
+              ><span id="temp-max-today">55°</span>
+            </div>
+            <div class="weather-main-today" id="weather-main">Sunnen</div>
+          </div>
+
+          <!-- 5day Forecast -->
+          <div class="future-forecast">
+            <h5>6-DAYS FORECAST</h5>
+            <div id="future-forecast-box"></div>
+          </div>
+        </div>
+      <!-- More sections for richer content -->
+      <section class="more-weather">
+        <div class="hourly">
+          <h4>Next 24 hours</h4>
+          <div id="hourly-forecast" class="hourly-grid"></div>
+        </div>
+        <div class="insights">
+          <h4>About today’s weather</h4>
+          <p class="insight-text">Stay informed with temperature range, humidity, and perceived feel. Review the hourly changes to plan commutes, workouts, and outdoor time.</p>
+          <ul class="tips">
+            <li>Check wind before cycling or running.</li>
+            <li>Mind humidity for comfort indoors and outdoors.</li>
+            <li>Track sunrise and sunset for optimal daylight.</li>
+          </ul>
+        </div>
+      </section>
+        </div>
+        <aside class="side-column">
+          <section class="about-app">
+            <h3>About this app</h3>
+            <p>Real‑time weather powered by OpenWeather. Explore current conditions, 6‑day forecast, and hourly outlook to plan your day with confidence.</p>
+            <ul class="about-points">
+              <li>Accurate forecasts for cities worldwide.</li>
+              <li>Live geolocation for instant local weather.</li>
+              <li>Icons and tips tailored to conditions.</li>
+            </ul>
+          </section>
+          <section class="weather-faq">
+            <h3>Weather Q&A</h3>
+            <div class="qa">
+              <h4>Why does humidity affect how hot it feels?</h4>
+              <button class="solution-toggle" aria-expanded="false">Show solution</button>
+              <div class="solution" hidden>
+                High humidity slows sweat evaporation, reducing the body’s cooling and making temperatures feel hotter.
+              </div>
+            </div>
+            <div class="qa">
+              <h4>What causes sudden afternoon thunderstorms?</h4>
+              <button class="solution-toggle" aria-expanded="false">Show solution</button>
+              <div class="solution" hidden>
+                Surface heating creates rising moist air. As it cools aloft, clouds build rapidly; instability and moisture trigger storms.
+              </div>
+            </div>
+            <div class="qa">
+              <h4>Is a lower pressure always a sign of rain?</h4>
+              <button class="solution-toggle" aria-expanded="false">Show solution</button>
+              <div class="solution" hidden>
+                Falling pressure often precedes unsettled weather, but local factors and fronts determine actual rainfall.
+              </div>
+            </div>
+          </section>
+        </aside>
+      </div>
+      <!-- nav section moved to top -->
+      </div>
+      <!-- script -->
+    <script src="js/main.js"></script>
+  </body>
+  </html>
